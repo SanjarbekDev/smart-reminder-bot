@@ -1,1 +1,3 @@
 # smart-reminder-bot
+
+#Yakunlanmagan 
