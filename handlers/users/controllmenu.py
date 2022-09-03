@@ -166,8 +166,7 @@ async def set_timezone(call: CallbackQuery, state: FSMContext):
     data={
         'user_name':call.from_user.username,
         'user_id':call.from_user.id,
-        'time_zone':call.data,
-        'status':'active'
+        'time_zone':call.data
     }
     try:
         db.update('users',set=f"time_zone='{data['time_zone']}'",where=f"user_id='{data['user_id']}'")
@@ -183,8 +182,7 @@ async def set_timezone(call: CallbackQuery, state: FSMContext):
     data={
         'user_name':call.from_user.username,
         'user_id':call.from_user.id,
-        'time_zone':call.data,
-        'status':'active'
+        'time_zone':call.data
     }
 
     if db.filter(table_name='users',user_id=call.from_user.id):
